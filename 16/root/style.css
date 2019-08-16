@@ -1,0 +1,35 @@
+/* Quick hack to get rid of margin and padding. Typically this would be done by the reset styling.*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    /* For responsive design the line below is better so that the wrapper scales with the width of the device */
+    /* width: 80%;*/
+}
+
+video {
+    width: 100%;
+}
+
+/* Trick to get the height of the video to scale with the width when embedding from a site such as YouTube or Vimeo. Check in case there is a better way of doing this since the tutorial as made. */
+.videowrapper {
+    position: relative;
+    /* By setting the padding to %, we add a height to the .videowrapper which scales according to its own width. By setting the padding to 56.25% we then have a 16:9 scaling (1920px x 1080px) which is the size for videos. */
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0px;
+}
+
+.videowrapper iframe {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+}
