@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid; /* defines css grid */
+    grid-template-columns: 1fr 1fr; /* can use % of width and auto also */
+    grid-template-areas: /* allows us to put these class elements wherever we want on the page */
+    "title title"
+    "header header"
+    "sidebar sidebar"
+    "content content"
+    "footer footer";
+    grid-gap: 10px; /* creates gap between the grids */
+}
+
+.title {
+    grid-area: title;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid div:nth-child(even) {
+    background-color: red;
+}
+
+.grid div:nth-child(odd) {
+    background-color: green;
+}
+
+@media screen and (min-width: 736px)
+{
+    .grid {
+        display: grid; /* defines css grid */
+        grid-template-columns: 1fr 500px 500px 1fr; /* can use % of width and auto also */
+        grid-template-areas: /* allows us to put these class elements wherever we want on the page */
+        /* use . to leave whitespace -> has effect of creating a wrapper */
+        ". title title ."
+        ". header header ."
+        ". sidebar content ."
+        ". footer footer .";
+    }
+}
