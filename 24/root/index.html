@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title></title>
+    </head>
+    <body>
+        <!--Get has limit of 3000 characters in URL and display the data. Post has no limit and is used for sensitive data. It hides the data.-->
+        <form action="contactform.php" method="POST"> 
+            <input type="text" name="email" placeholder="Write your e-mail...">
+            <input type="text" name="email" value="Write your e-mail...">
+            Male: <input type="radio" name="gender" value="Male">
+            Female: <input type="radio" name="gender" value="Female">
+            Other: <input type="radio" name="gender" value="Other" checked>
+            <input type="password" name="password" placeholder="Password">
+            <textarea name="message" placeholder="Write a message!"></textarea>
+            <select name="car">
+                <option value="none">None</option>
+                <option value="car1">Ford</option>
+                <option value="car2">Mercedes</option>
+                <option value="car3">Opel</option>
+            </select>
+            <button type="submit" name="submit">Submit</button>
+        </form>
+
+    </body>
+</html>

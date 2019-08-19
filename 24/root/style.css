@@ -1,0 +1,42 @@
+form {
+    width: 300px;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 100px;
+}
+
+input, textarea {
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+    border: 1px solid rgb(255, 0, 0);
+}
+
+/* Style everything that has a placeholder. This is called a pseudo-element */
+::placeholder {
+    color: red;
+    opacity: 1;
+}
+
+/* The below two bit of code may no longer be needed as the lines above may style
+correctly for all browsers now. Check.
+/* Style for internet explorer */
+:-ms-input-placeholder {
+    color: red;
+    opacity: 1;
+}
+
+/* Style for Edge */
+::-ms-input-placeholder {
+    color: red;
+    opacity: 1;
+}
