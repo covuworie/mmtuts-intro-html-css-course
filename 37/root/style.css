@@ -1,0 +1,59 @@
+/* Resets default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Example 1 */
+.img-test {
+    width: 500px;
+    height: 500px;
+    background-image: url("img/logo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;*/
+    transition: all 2s ease-in-out 1s;
+    /*Support for all main browsers is there now so below code is redundant
+    /*-webkit-transition: all 2s ease-in-out 1s;
+    -moz-transition: all 2s ease-in-out 1s;
+    -o-transition: all 2s ease-in-out 1s;*/
+}
+
+.img-test:hover {
+    background-image: url("img/logo.png")
+}
+
+/* Example 2 */
+.button-test {
+    display: block;
+    width: 128px;
+    height: 60px;
+    padding-left: 20px;
+    background-color: lightblue;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #222;
+    line-height: 60px;
+    text-decoration: none; 
+    white-space: nowrap;
+
+    transition: all 0.5s ease-in-out 1s;
+}
+
+.button-test:hover {
+    width: 170px;
+    height: 300px;
+    padding-left: 500px;
+    background-color: red;
+}
+
+.button-test span {
+    padding-left: 30px;
+    color: white;
+    font-weight: 900;
+}
