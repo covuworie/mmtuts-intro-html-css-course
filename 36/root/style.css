@@ -1,0 +1,47 @@
+/* Pseudo Classes -> change state of a specific element */
+/* one colon means class */
+/* :root {
+    color: red;
+} */
+
+h1:hover {
+    color:red;
+}
+
+a:visited {
+    color: green;
+}
+
+.list-example-1 p:last-child {
+    color: blue;
+}
+
+.list-example-2 p:nth-child(2n+1) {
+    color: pink;
+}
+
+/* Pseudo Elements -> change part of the element itself */
+/* two colons means element */
+.element-1::first-line {
+    background-color: yellow;
+    color: red;
+}
+
+.element-2::first-letter {
+    background-color: green;
+    color: white;
+}
+
+.element-3::selection {
+    background-color: green;
+    color: blue;
+}
+
+.element-4::before {
+    /*content: "This is a paragraph - "*/
+    content: attr(daniel);
+}
+
+.element-4::after {
+    content: url(img/image.png);
+}
