@@ -1,0 +1,22 @@
+/* pseduo element -> styling applies to everything inside it (child elements can access variable)
+   root element is one level above the html tag so it applies to everything inside the site
+   this allows the variables defined below to be accessed by any tag*/
+
+:root {
+    /* this is how to define a variable */
+    --text-color: #ddd;
+}
+
+.section-one {
+    /* this variable has scope of .section-one. any child elements can access the variable*/
+    --text-size: 14px;
+}
+
+.section-one p {
+    font-size: var(--text-size)
+}
+
+.section-two p {
+    /* this is how to use the variable */
+    color: var(--text-color)
+}
